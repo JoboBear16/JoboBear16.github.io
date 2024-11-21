@@ -1,30 +1,24 @@
-
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-
-  }
-
-.header {
-    position:fixed;
-    overflow: hidden;
-    background-color: rgba(14, 50, 20, 0.5);
-
-    /* rgb(241, 211, 102) 
-     border-bottom: 8px solid rgb(68, 51, 45);*/
-     padding: 20px 10px;
-     width: 100%;
-
 }
 
+.header {
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(14, 50, 20, 0.5);
+    padding: 20px 10px;
+    width: 100%;
+}
 
-  .header a {
+.header a {
     float: left;
     color: rgb(246, 243, 242);
     background-color: rgb(68, 51, 45);
-    margin:5px;
+    margin: 5px;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -32,192 +26,129 @@
     line-height: 25px;
     border-radius: 4px;
     font-weight: bold;
-  }
-  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .header a:hover {
-    background-color: rgb(53, 83, 54);
-    color: white;
-    font-weight:bold;
-  }
-.header a.active {
-    background-color: rgb(68, 51, 45);
-    color: rgb(245, 242, 242);
-    margin-left:15px;
-  }
-  
-  .header-right {
-    float: right;
-    font-weight:bold;
-    margin-right:20px;
-  }
+}
 
+.header-right {
+    float: right;
+    font-weight: bold;
+    margin-right: 20px;
+}
 
 .hero {
     width: 100%;
     height: 120vh;
     background-image: URL("sunflowerBackground.jpg");
-    background-size:cover;
-    background-position:bottom;
+    background-size: cover;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: rgb(68, 51, 45);
-    
-  }
+}
 
-  .hero h1 {
+.hero h1 {
     width: 60%;
     font-weight: 700;
     font-size: 70px;
     transition: 0.3s ease-in-out;
-   
-  }
+}
 
-  .hero h1:hover {
-    cursor: default;
-    letter-spacing: 1px;
-    
-  }
-
-
-  .hero p {
-    margin:25px;
+.hero p {
+    margin: 25px;
     width: 60%;
     font-size: 30px;
-  }
+}
+
+.connect {
+    width: 60%;
+    margin-top: 45px;
+}
+
+/* Media Queries */
+
+/* Adjust styles for smaller screens */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 50px;
+        width: 80%;
+    }
+
+    .hero p {
+        font-size: 24px;
+        width: 80%;
+    }
+
+    .header a {
+        font-size: 16px;
+        padding: 10px;
+    }
 
     .connect {
-    width: 60%;
-    margin-top:45px
-
-}  
-
-  .connect p {
-    font-size: 16px;
-    color: rgb(53, 83, 54);
-    font-weight: bold;
-    margin: 10px 0;
-    margin-bottom:15px;
-
-  }
-
-  .socialLinks {
-    display: flex;
-    margin: 10px 0;
-    
- }
-
-  .socialLinks li {
-    list-style: none;
-    
-  }
-  .socialIcon {
-    margin: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    
-  }
-
-  .socialIcon:nth-child(1) {
-    margin-left: 0;
-  }
-
-  a.hover {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    color: rgb(68, 51, 45);
-  }
-  
-    a.hover::before,
-    a.hover::after {
-   content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
+        width: 80%;
     }
-    a.hover::before {
-    background-color: #236d48;
-    height: 2px;
-    bottom: 0;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    }
-    a.hover::after {
-    content: attr(data-replace);
-    height: 100%;
-    top: 0;
-    transform-origin: 100% 50%;
-    transform: translate3d(200%, 0, 0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    color: #236d48;
-    }
-  
-    a.hover:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
-    }
-    a.hover:hover::after {
-    transform: translate3d(0, 0, 0);
-    }
-  
-    a.hover span {
-    display: inline-block;
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    }
-  
-    a.hover:hover span {
-    transform: translate3d(-200%, 0, 0);
-    }
-
-#about {
-    background-color: rgb(53, 83, 54);
-    background-image: linear-gradient(
-    135deg,
-    rgb(53, 83, 54) 0%,
-    rgb(151, 165, 47) 100%
-  );
-    color: white;
-    height: 55%;
-    border-top: 0px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-     padding-bottom: 10%;
- 
 }
-.container {
-    background-position: center;
-    background-size: cover;
 
-}
-.jolie {
-    float:left;
-    margin-left:50px;
-    margin-right:30px;
-    margin-top:50px;
-    width:400;
-}
-.about-me {
-    padding-top:50px;
-    font-size: 45px;
-    text-align: center;
-    font-weight:bold;
+/* Adjust styles for very small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5px;
+    }
 
-}
-.about-info{
-    margin:20px;
-    padding:10px;
-    margin-top: 50px;
+    .header a {
+        font-size: 14px;
+        padding: 8px;
+    }
 
-}
-.resume {
-    color: white;
+    .header-right {
+        margin-right: 10px;
+    }
 
+    .hero h1 {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .hero p {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .connect {
+        width: 90%;
+    }
+
+    .socialLinks {
+        flex-direction: column;
+    }
+
+    .socialIcon {
+        margin: 10px 0;
+    }
 }
+
+/* Extra small devices (320px and up) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .header a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .about-me {
+        font-size: 32px;
+    }
+
+    .about-info {
+        font-size: 14px;
+        margin: 10px;
+    }
+}
+
