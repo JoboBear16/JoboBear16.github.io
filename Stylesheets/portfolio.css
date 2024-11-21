@@ -60,7 +60,7 @@
 .hero {
     width: 100%;
     height: 120vh;
-    background-image: url('../images/sunflower.webp');
+    background-image: url('Photos/sunflower.webp');
     background-size:cover;
     background-position:bottom;
     display: flex;
